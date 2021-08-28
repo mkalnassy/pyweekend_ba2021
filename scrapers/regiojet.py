@@ -9,6 +9,7 @@ class Scraper(ScraperBase):
 
     search_currency = "CZK"
 
+
     def _load_data(self, request):
         params = {
             "departureDate": request.date.strftime("%Y-%m-%d"),

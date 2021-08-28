@@ -8,6 +8,7 @@ from httpx import Client, Response
 
 from scrapers.base.request import Request
 from scrapers.base.response import TripResponse
+from scrapers.redis_holder.redis_holder import redis_cache
 
 # TODO
 # 1. tests
@@ -49,13 +50,14 @@ class ScraperBase(ABC):
         list(self.scrape_iter(request))
 
     def scrape_iter(self, request: Request) -> Iterator[TripResponse]:
-        raw_response = self._load_data(request)
+        @redis_cache(time=60)
+        def scrape(request: Request):
+            raw_response = self._load_data(request)
+            self._check_data(raw_response)
+            yield from self._parse_data(raw_response)
 
-        self._check_data(raw_response)
-
-        for trip in self._parse_data(raw_response):
+        for trip in scrape(request):
             trip_response = TripResponse(trip)
-
             print(trip_response.readable)
             yield trip_response
 
