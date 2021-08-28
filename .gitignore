@@ -1,0 +1,23 @@
+.idea/
+.vscode/
+
+# Config with secrets
+**config/config.py
+.env
+**client_secret.json
+
+# PackageS
+.cache
+.coverage*
+*.egg-info
+.eggs/
+dist
+reports
+build
+
+*.pyc
+*.csv
+docs/kw/*
+docs/_build/*
+docs/_static/*
+docs/_templates/*

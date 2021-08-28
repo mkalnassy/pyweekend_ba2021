@@ -1,0 +1,69 @@
+{
+  "MONBUS": {
+    "BARCELONA": {
+      "location_id": "10001",
+      "name": "Barcelona Sants, Anden 3 (Estaci\u00f3n de Autobuses And\u00e9n) (Barcelona, Barcelona)",
+      "lon": 2.1398997,
+      "lat": 41.3801019,
+      "city_name": "Barcelona"
+    },
+    "PAMPLONA": {
+      "location_id": "11930",
+      "name": "Pamplona (Iru\u00f1a) (Estaci\u00f3n de Autobuses) (Pamplona, Navarra)",
+      "lon": -1.6453367,
+      "lat": 42.8117522,
+      "city_name": "Pamplona"
+    },
+    "ZARAGOZA": {
+      "location_id": "11934",
+      "name": "Zaragoza  (Estaci\u00f3n de Autobuses) (Zaragoza, Zaragoza)",
+      "lon": -0.9122270122,
+      "lat": 41.6582693902,
+      "city_name": "Zaragoza"
+    },
+    "PUEBLA": {
+      "location_id": "11906",
+      "name": "Puebla de Sanabria ((Mes\u00f3n Sanabria)) (Puebla de Sanabria, Zamora)",
+      "lon": -6.6448830599,
+      "lat": 42.0606539044,
+      "city_name": "Puebla de Sanabria"
+    }
+  },
+  "REGIOJET": {
+    "PRAGUE": {
+      "location_id": "10204003",
+      "name": "Prague - \u00daAN Florenc",
+      "lon": 14.4407234192,
+      "lat": 50.0893783569,
+      "city_name": "Prague"
+    },
+    "VIENNA_HBF": {
+      "location_id": "3741302011",
+      "name": "Vienna - Hbf",
+      "lon": 16.3764801025,
+      "lat": 48.1852264404,
+      "city_name": "Vienna"
+    },
+    "BRNO": {
+      "location_id": "10204002",
+      "name": "Brno - bus station Grand",
+      "lon": 16.6142520905,
+      "lat": 49.1933555603,
+      "city_name": "Brno"
+    },
+    "VIENNA_AIRPORT": {
+      "location_id": "10204055",
+      "name": "Vienna - Schwechat Airport Busstation",
+      "lon": 16.5632343292,
+      "lat": 48.1199684143,
+      "city_name": "Vienna"
+    },
+    "MUNICH": {
+      "location_id": "10204006",
+      "name": "Munich - Flg. Flughafen FJS, Terminal 2",
+      "lon": 11.7902078629,
+      "lat": 48.3559150696,
+      "city_name": "Munich"
+    }
+  }
+}
