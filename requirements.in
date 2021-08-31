@@ -1,2 +1,11 @@
 httpx
 lxml
+
+# database requirements
+psycopg2-binary
+sqlalchemy
+
+# APP requirements
+fastapi
+pydantic
+uvicorn
