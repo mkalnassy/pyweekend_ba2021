@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<!--<table class="table">-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <td>Milda</td>-->
+<!--            <td>je nejlepsi</td>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+    {% for journey in journeys %}
+<!--    <tr>-->
+<!--        <td>{{ journey["origin"] }}</td>-->
+<!--        <td>{{ journey["departure"] }}</td>-->
+<!--    </tr>-->
+    <div style="background-color: red; border: 3px solid #870812; color: white; padding: 10px; margin-top: 20px; border-radius: 10px; box-shadow: 10px 10px #aaa;">
+        Source: {{ journey["origin"] }} Departure: {{ journey["departure"] }} Destination: {{ journey["destination"] }}
+    </div>
+    {% endfor %}
+<!--    </tbody>-->
+<!--    </table>-->
+{% endblock %}
