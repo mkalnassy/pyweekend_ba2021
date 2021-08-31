@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#inputOrigin").autocomplete({source: "/whisperer?field=origin", minLength: 2});
+            $("#inputDestination").autocomplete({source: "/whisperer?field=destination", minLength: 2});
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <form action="/search" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="inputOrigin" class="form-label">Origin</label>
+            <input type="text" name="origin" class="form-control" id="inputOrigin" value="{{ origin }}">
+        </div>
+        <div class="mb-3">
+            <label for="inputDst" class="form-label">Destination</label>
+            <input type="text" name="destination" class="form-control" id="inputDst" value="{{ destination }}">
+        </div>
+        <div class="mb-3">
+            <label for="inputTimeFrom" class="form-label">Time from</label>
+            <input type="datetime-local" name="time_from" class="form-control" id="inputTimeFrom"
+                   value="{{ time_from }}">
+        </div>
+        <div class="mb-3">
+            <label for="inputTimeTo" class="form-label">Time to</label>
+            <input type="datetime-local" name="time_to" class="form-control" id="inputTimeTo" value="{{ time_to }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
